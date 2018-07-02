@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/book/book",
+    "pages/index/index",
+    "pages/video/video",
+    "pages/audio/audio",
+    "pages/tribune/tribune",
+    "pages/mall/mall",
+    "pages/activity/activity",
+    "pages/mine/mine",
+    "pages/more/more"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F9F6ED",
+    "navigationBarTitleText": "心密之家",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#111",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/icons/index.png",
+        "iconPath": "images/icons/index1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/icons/mine.png",
+        "iconPath": "images/icons/mine1.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      },
+      {
+        "selectedIconPath": "images/icons/more.png",
+        "iconPath": "images/icons/more1.png",
+        "pagePath": "pages/more/more",
+        "text": "更多"
+      }
+    ]
+  }
+}

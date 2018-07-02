@@ -1,0 +1,23 @@
+/* components/search/search.wxss */
+.wrapper{
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+}
+.wrapper input{
+  display: inline-block;
+  width: 100%;
+  height: 56rpx;
+  border: 1px solid #eee;
+  border-radius: 28rpx;
+  text-indent: 2em;
+   /* background: #eee;  */
+}
+.wrapper icon{
+  position: absolute;
+  top: 12rpx;
+  left: 12rpx;
+}
+.input-placeholder{
+  /* color: #888; */
+}

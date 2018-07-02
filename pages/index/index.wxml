@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="home-top">
+    <image class="home-top-image" src="../images/dd.png" mode="widthFix"></image>
+  </view>
+  <view class="home-nav">
+    <view class="nav-item" wx:for="{{navList}}"  wx:key="navUrl" >
+      <navigator url="{{item.navUrl}}">
+        <image class="" src="{{item.imgUrl}}" mode="cover"></image>
+        <view>
+          <text class="home-navname">{{item.navname}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="recommend">
+    <view class="recommend-item" wx:for="{{recommendList}}" wx:key="navUrl" >
+      <navigator url="{{item.navUrl}}">
+        <image class="" src="{{item.imgUrl}}" mode="widthFix"></image>
+        <view>
+          <text class="home-navname">{{item.navname}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

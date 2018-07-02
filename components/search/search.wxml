@@ -1,0 +1,5 @@
+<view class="wrapper">
+  <icon type='search' size='20'></icon>
+  <input placeholder="{{mPlaceholder}}" confirm-type="search"></input>
+  <slot></slot>
+</view>
