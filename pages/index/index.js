@@ -7,40 +7,40 @@ Page({
     motto: 'Hello World',
     navList: [{
       navUrl: '../book/book',
-      imgUrl: '../images/home_book.png',
+      imgUrl: '../../images/home_img/home_book.png',
       navname: '心密书库'
     }, {
       navUrl: '../video/video',
-      imgUrl: '../images/home_video.png',
+      imgUrl: '../../images/home_img/home_video.png',
       navname: '心密视频'
       }, {
         navUrl: '../audio/audio',
-        imgUrl: '../images/home_audio.png',
+        imgUrl: '../../images/home_img/home_audio.png',
         navname: '心密音频'
     }, {
       navUrl: '../tribune/tribune',
-      imgUrl: '../images/home_tribune.png',
+      imgUrl: '../../images/home_img/home_tribune.png',
       navname: '心密论坛'
       }, {
         navUrl: '../mall/mall',
-        imgUrl: '../images/home_mall.png',
+        imgUrl: '../../images/home_img/home_mall.png',
         navname: '商城'
     }, {
       navUrl: '../activity/activity',
-      imgUrl: '../images/home_activity.png',
+      imgUrl: '../../images/home_img/home_activity.png',
       navname: '活动报名'
       }],
     recommendList: [{
       navUrl: '../video/video',
-      imgUrl: '/images/img/book1.png',
+      imgUrl: '../../images/home_img/home_re_video.png',
       navname: '视频'
     }, {
       navUrl: '../audio/audio',
-      imgUrl: '/images/img/book2.png',
+      imgUrl: '../../images/home_img/home_re_audio.png',
       navname:'音频'
     }, {
       navUrl: '../book/book',
-      imgUrl: '/images/img/book3.png',
+      imgUrl: '../../images/home_img/home_re_book.png',
       navname: '书籍'
     }],
     canIUse: wx.canIUse('button.open-type.getUserInfo')

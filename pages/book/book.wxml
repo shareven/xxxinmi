@@ -1,5 +1,6 @@
 <!--pages/book/book.wxml-->
 <view>
+<view class='loading' wx:if="{{showloading}}"></view>
 <view class='top-group'>
   <search m-placeholder="搜索书籍名称/种类"></search>
 </view>

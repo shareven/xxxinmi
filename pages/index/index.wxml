@@ -1,7 +1,8 @@
 <!--index.wxml-->
 <view class="container">
+  
   <view class="home-top">
-    <image class="home-top-image" src="../images/dd.png" mode="widthFix"></image>
+    <image class="home-top-image" src="../../images/home_img/home_top.png" mode="widthFix"></image>
   </view>
   <view class="home-nav">
     <view class="nav-item" wx:for="{{navList}}"  wx:key="navUrl" >
