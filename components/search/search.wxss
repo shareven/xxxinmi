@@ -2,16 +2,17 @@
 .wrapper{
   position: relative;
   width: 75%;
-  margin: 0 auto;
+  margin: 20rpx auto;
 }
 .wrapper input{
   display: inline-block;
+  box-sizing: border-box;
+  padding-left: 60rpx;
   width: 100%;
   height: 56rpx;
   border: 1px solid #eee;
   border-radius: 28rpx;
-  text-indent: 2em;
-   /* background: #eee;  */
+  font-size: 30rpx;
 }
 .wrapper icon{
   position: absolute;
@@ -19,5 +20,5 @@
   left: 12rpx;
 }
 .input-placeholder{
-  /* color: #888; */
+
 }

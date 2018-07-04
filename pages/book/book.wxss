@@ -1,1 +1,20 @@
 /* pages/book/book.wxss */
+.top-group{
+  height: 60rpx;
+}
+.bookshelf{
+  position: absolute;
+  top: 5rpx;
+  right: 20rpx;
+  width: 40rpx;
+  height: 60rpx;
+  text-align: center;
+}
+.bookshelf image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: -20rpx;
+}
+.bookshelf text{
+  font-size: 20rpx;
+}

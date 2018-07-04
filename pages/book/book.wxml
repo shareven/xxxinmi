@@ -1,7 +1,18 @@
 <!--pages/book/book.wxml-->
 <view>
-<view class='loading' wx:if="{{showloading}}"></view>
-<view class='top-group'>
-  <search m-placeholder="搜索书籍名称/种类"></search>
-</view>
+  <view class='loading' wx:if="{{showloading}}"></view>
+  <view class='top-group'>
+    <search m-placeholder="搜索书籍名称/种类"></search>
+    <navigator class='bookshelf'>
+      <image src="../../images/icons/bookstore.png"></image>
+      <text>书架</text>
+    </navigator>
+  </view>
+  <view class='tabs'>
+    <scroll-view scroll-x="true">
+      <view class='tab-item {{currentTab==index?"active":""}}' data-current='{{index}}'  wx:for="{{categorys}}">
+         <text bindtap='switchTabs '>{{item.key}}</text>
+      </view>
+    </scroll-view>
+  </view>
 </view>
