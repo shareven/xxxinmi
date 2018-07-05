@@ -9,10 +9,18 @@
     </navigator>
   </view>
   <view class='tabs'>
-    <scroll-view scroll-x="true">
-      <view class='tab-item {{currentTab==index?"active":""}}' data-current='{{index}}'  wx:for="{{categorys}}">
-         <text bindtap='switchTabs '>{{item.key}}</text>
+    <view class='navbar'>
+      <text class='tab-item {{currentTab==index?"active":""}}' data-current='{{index}}' wx:for="{{categorys}}" wx:key="{{item.key}}" bindtap='switchTabs'>{{item.key}} </text>
+    </view>
+
+    <view class='sub-nav'>
+      <text class='tab-item {{currentSubTab==index?"active":""}}' data-current-sub='{{index}}' wx:for="{{subCategorys}}" wx:key="{{item.orderCol}}" bindtap='getBookList'>{{item.orderCol}} </text>
+    </view>
+    <view class='book-list'>
+      <view class='book' wx:for="{{bookList}}" wx:key="{{item.id}}" >
+        <image src="{{item.cover}}" mode="cover"></image>
+        <text>{{item.name}}</text>
       </view>
-    </scroll-view>
+    </view>
   </view>
 </view>

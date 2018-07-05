@@ -7,6 +7,7 @@ Page({
   data: {
     showloading: !1,
     currentTab: 0,
+    currentSubTab: 0,
     categorys: [{
       key: '书库',
       param: [{
@@ -32,16 +33,72 @@ Page({
       }, {
         orderCol: '古尊宿集'
       }]
-    }, ]
+    }],
+    subCategorys: [],
+    bookList:[
+      {
+        id:122,
+        cover:'../../images/img/book1.png',
+        name:'窗前收到地方'
+      },
+      {
+        id:12222,
+        cover:'../../images/img/book2.png',
+        name:'但是地方'
+      },
+      {
+        id:1242,
+        cover:'../../images/img/book3.png',
+        name:'还好到地方'
+      },
+      {
+        id:12245,
+        cover:'../../images/img/book4.png',
+        name:'豆腐坊地方'
+      },
+    ]
+  },
+
+  /**
+   * 获取书籍分类
+   */
+  getBookCategorys: (e) => {
+    wx.request({
+      url: '',
+      success: (d) => {
+
+        this.setData({
+          categorys:d.data.list,
+          subCategorys: d.data.list[0].param
+        })
+      }
+    });
   },
 
   /**
    * 切换书籍分类
    */
   switchTabs: function(e) {
+    var index = e.target.dataset.current;
     this.setData({
-      currentTab: e.detail.current
+      currentTab: index,
+      subCategorys: this.data.categorys[index].param
     })
+  },
+  /**
+   * 获取书籍列表
+   */
+  getBookList:function (e)  {
+    this.setData({
+      currentSubTab: e.target.dataset.currentSub
+    });
+    // wx.request({
+    //   url: '',
+    //   data: {},
+    //   success: (d) => {
+
+    //   }
+    // })
   },
   /**
    * 生命周期函数--监听页面加载

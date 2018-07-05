@@ -18,3 +18,34 @@
 .bookshelf text{
   font-size: 20rpx;
 }
+.tabs{
+margin: 20rpx 0;
+}
+.navbar{
+  display: flex;
+  margin: 50rpx 0;
+}
+.navbar .tab-item{
+  flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  color: #888;
+}
+.navbar .tab-item.active{
+  color: #333;
+}
+.sub-nav{
+  width: 250rpx;
+  background: red;
+}
+.sub-nav .tab-item{
+  display: block;
+  padding-left: 50rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  color: #888;
+}
+.sub-nav .tab-item.active{
+  color: #333;
+}
