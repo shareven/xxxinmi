@@ -3,7 +3,7 @@
   <view class='loading' wx:if="{{showloading}}"></view>
   <view class='top-group'>
     <search m-placeholder="搜索书籍名称/种类"></search>
-    <navigator class='bookshelf'>
+    <navigator class='bookshelf' url='./bookshelf/bookshelf' hover-class="none">
       <image src="../../images/icons/bookstore.png"></image>
       <text>书架</text>
     </navigator>
@@ -12,14 +12,15 @@
     <view class='navbar'>
       <text class='tab-item {{currentTab==index?"active":""}}' data-current='{{index}}' wx:for="{{categorys}}" wx:key="{{item.key}}" bindtap='switchTabs'>{{item.key}} </text>
     </view>
-
-    <view class='sub-nav'>
-      <text class='tab-item {{currentSubTab==index?"active":""}}' data-current-sub='{{index}}' wx:for="{{subCategorys}}" wx:key="{{item.orderCol}}" bindtap='getBookList'>{{item.orderCol}} </text>
-    </view>
-    <view class='book-list'>
-      <view class='book' wx:for="{{bookList}}" wx:key="{{item.id}}" >
-        <image src="{{item.cover}}" mode="cover"></image>
-        <text>{{item.name}}</text>
+    <view class='book-content clearfix'>
+      <view class='sub-nav pull-left'>
+        <text class='tab-item ellip {{currentSubTab==index?"active":""}}' data-current-sub='{{index}}' wx:for="{{subCategorys}}" wx:key="{{item.orderCol}}" bindtap='getBookList'>{{item.orderCol}} </text>
+      </view>
+      <view class='book-list pull-left'>
+        <navigator url='./bookdetail/bookdetail' class='book' hover-class="none" wx:for="{{bookList}}" wx:key="{{item.id}}">
+          <image src="{{item.cover}}" mode="cover"></image>
+          <text class='ellip'>{{item.name}}</text>
+        </navigator>
       </view>
     </view>
   </view>

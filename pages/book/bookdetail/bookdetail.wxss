@@ -1,0 +1,39 @@
+/* pages/book/bookdetail/bookdetail.wxss */
+.head-book{
+  padding: 50rpx 30rpx;
+  background: #ed8;
+}
+.head-book image{
+  width: 195rpx;
+  height: 282rpx;
+}
+.head-book .book-info{
+  display: inline-block;
+  margin: 30rpx 0;
+  margin-left: 20rpx;
+  vertical-align: top;
+}
+.head-book .book-info .title{
+  font-size: 40rpx;
+  color: #333;
+}
+.head-book .book-info .author{
+  font-size: 30rpx;
+  color: #888;
+}
+.btn-group{
+  display: flex;
+}
+.btn-group button{
+  flex: 1;
+  margin: 30rpx;
+}
+.brief-introduction{
+  margin: 30rpx 20rpx;
+}
+.details{
+  margin: 20rpx ;
+  text-indent: 2em;
+  color: #888;
+  font-size: 30rpx;
+}

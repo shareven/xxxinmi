@@ -1,8 +1,10 @@
 /* pages/book/book.wxss */
-.top-group{
+
+.top-group {
   height: 60rpx;
 }
-.bookshelf{
+
+.bookshelf {
   position: absolute;
   top: 5rpx;
   right: 20rpx;
@@ -10,35 +12,49 @@
   height: 60rpx;
   text-align: center;
 }
-.bookshelf image{
+
+.bookshelf image {
   width: 40rpx;
   height: 40rpx;
   margin-bottom: -20rpx;
 }
-.bookshelf text{
+
+.bookshelf text {
   font-size: 20rpx;
 }
-.tabs{
-margin: 20rpx 0;
+
+.tabs {
+  margin: 20rpx 0;
 }
-.navbar{
+
+.navbar {
   display: flex;
+  padding: 30rpx 0;
   margin: 50rpx 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
-.navbar .tab-item{
+
+.navbar .tab-item {
   flex: 1;
   text-align: center;
   font-size: 30rpx;
   color: #888;
 }
-.navbar .tab-item.active{
-  color: #333;
+
+.navbar .tab-item.active {
+  color: #222;
 }
-.sub-nav{
+
+.book-content {
+  width: 100%;
+}
+
+.sub-nav {
   width: 250rpx;
-  background: red;
 }
-.sub-nav .tab-item{
+
+.sub-nav .tab-item {
   display: block;
   padding-left: 50rpx;
   height: 70rpx;
@@ -46,6 +62,31 @@ margin: 20rpx 0;
   font-size: 30rpx;
   color: #888;
 }
-.sub-nav .tab-item.active{
-  color: #333;
+
+.sub-nav .tab-item.active {
+  color: #222;
+}
+
+.book-list {
+  float: left;
+  width: 500rpx;
+  overflow: hidden;
+}
+
+.book-list .book {
+  float: left;
+  margin-bottom:30rpx; 
+  width: 50%;
+  text-align: center;
+}
+
+.book-list .book image {
+  width: 195rpx;
+  height: 282rpx;
+}
+.book-list .book text {
+  display: block;
+  width: 100%;
+  font-size: 25rpx;
+  color: #555;
 }

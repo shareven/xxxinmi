@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/book/bookdetail/bookdetail",
     "pages/book/book",
+    "pages/book/bookshelf/bookshelf",
     "pages/index/index",
     "pages/video/video",
     "pages/audio/audio",

@@ -1,0 +1,14 @@
+<!--pages/book/bookdetail/bookdetail.wxml-->
+<view class='head-book'>
+  <image src='../../../images/img/book1.png'></image>
+  <view class='book-info'>
+    <view class='title ellip'>豆腐坊地方</view>
+    <view class='author ellip'>郭老师</view>
+  </view>
+</view>
+<view class='btn-group'>
+  <button type='default' size='mini'>加入收藏</button>
+  <button type='primary' size='mini'>开始阅读</button>
+</view>
+<view class='brief-introduction'>简介：</view>
+<view class='details'>如是我闻。一时佛住俱焰弥国金刚山顶，遍观十方，皆如火色。尔时如来即嘘长叹，普视众生都无差途。善哉众生当何所救？思惟已讫，一切诸佛世界及诸菩萨境界，上至三十三天，下至十金刚际及魔宫殿悉皆震动。其时即有过、现、未来一切诸佛，应念正思。复有诸菩萨等，住自心中而复不动。复有诸金刚领诸眷属执金刚事，不安其座，游行十方。复有诸天仙魔众，怖走无处。</view>
