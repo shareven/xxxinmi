@@ -1,44 +1,42 @@
-// pages/book/bookdetail/bookdetail.js
+// pages/book/bookreading/bookreading.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    bookName:'新年呢',
+    currentMode:'day'
   },
-   /**
-   * 加入收藏
+
+  /**
+   * 减小字体
    */
-  collectBook:function(){
-        // wx.showLoading({
-    //   title: '拼命拼命加载中',
-    // });
-  wx.request({
-    url: '',
-    success:function(res){
-      wx.showToast({
-        title: '成功',
-        icon: 'success',
-        duration: 2000
-      })
-    }
-  })
-    // wx.hideLoading()
+  reduceA: function (d) {
+    
   },
-   /**
-   * 开始阅读
+
+  /**
+   * 增大字体
    */
-  goReading:function(){
-     wx.navigateTo({
-       url: '../bookreading/bookreading',
-     })
+  addA: function (d) {
+    
   },
+
+  /**
+   * 切换夜间模式与白天模式
+   */
+  switchMode: function (d) {
+    this.setData({
+      currentMode: d.currentTarget.dataset.mode
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+  
   },
 
   /**

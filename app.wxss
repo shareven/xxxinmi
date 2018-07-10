@@ -82,3 +82,29 @@
     transform: rotateY(3600deg);
   }
 }
+
+/* 字体图标 */
+@font-face {
+  font-family: 'iconfont';  /* project id 742060 */
+  src: url('//at.alicdn.com/t/font_742060_jp6df2863n.eot');
+  src: url('//at.alicdn.com/t/font_742060_jp6df2863n.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_742060_jp6df2863n.woff') format('woff'),
+  url('//at.alicdn.com/t/font_742060_jp6df2863n.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_742060_jp6df2863n.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-baitianmoshimingliangmoshi:before { content: "\e632"; }
+
+.icon-icon--:before { content: "\e79d"; }
+
+.icon-yueduye_zitijianxiao:before { content: "\e60d"; }
+
+.icon-yueduye_zitizengda:before { content: "\e60e"; }
+

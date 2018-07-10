@@ -1,0 +1,33 @@
+<view class='container {{currentMode}}'>
+  <view class='top'>
+    <view class='nav'>
+      <navigator class='nav-index' url='../../index/index'>首页</navigator>
+      <text>>{{bookName}}</text>
+    </view>
+    <view class='control'>
+      <view hidden='{{currentMode=="night"}}' bindtap='switchMode' data-mode='night'>
+        <icon class='iconfont icon-icon--'></icon>
+      </view>
+      <view hidden='{{currentMode=="day"}}' bindtap='switchMode' data-mode='day'>
+        <icon class='iconfont icon-baitianmoshimingliangmoshi'></icon>
+      </view>
+      <view bindtap='reduceA'>
+        <icon class='iconfont icon-yueduye_zitijianxiao'></icon>
+      </view>
+      <view bindtap='addA'>
+        <icon class='iconfont icon-yueduye_zitizengda'></icon>
+      </view>
+
+    </view>
+  </view>
+  <view class='title'>
+    <text>大愚阿阇黎略传</text>
+    <text class='sub-title'>元音老人 | 2018-05-06</text>
+  </view>
+  <view class='content'>
+
+    大愚阿阇黎，武汉李氏子，俗名叔倍。参政于军阀割据时期，目睹诸军阀为争霸称王，抢夺地盘，互相残杀，掳掠民财，置国家危亡，生灵荼炭于不顾，于痛心疾首之余，乃奋而弃官出走，至庐山东林寺出家。初修净土法门，后拜经，大病几死，继遇盗又几死，虽屡遭厄难，曾不稍懈。嗣感人生苦短，佛法难遇，乃发奋修“般舟三昧”（译为“佛立三昧”，修法以七日或九日为一期，日夜经行，不可坐卧，能于空中感十方诸佛在其前立。）三、五日后，双腿浮肿，寸步难移，师为贯彻初衷，决不后退，咬紧牙关，用手爬行。一、二日后，两手也相继浮肿，每进一步，须付莫大艰巨的努力，个中苦难实非常人所堪忍受。故近代净宗行人绝少修此三昧，即修亦不能坚持到底，师于力尽爬不动时，立誓除死方休，以身滚动前进，经此一番艰苦卓绝的奋斗，偷心死尽，泯然深入大定，感普贤菩萨现身，为之灌顶，授以心中心密法。并谓《大藏经》中原有此法，甚为善巧，可检而参学。师检之果然，乃按菩萨所授与《大藏经秘密仪轨佛心经品亦通大随求陀罗尼》（二卷，唐菩提流志译）所说之六印一咒修持。经七年苦行，成就下山，开印心法门，为印心宗之初祖。
+      师下山后，为使世知有此善巧方便法门，所到之处，略显神通，大江南北无不为之轰动，当时求法者不下五、六万人，入室弟子近二百人。嗣之广大信众重神通而不重道，师乃易装归隐四川成都，嘱得其心髓之弟子王骧陆老居士嗣法传道，后人尊为印心宗第二祖。   师约于50年代在其成都弟子家留诗一首：      拈花怎么传，不妨密且禅，   归隐扬眉际，相逢瞬目边。   一期从古棹，三界任横眠，   临行无剩语，珍重一声○。      置于砚间，不辞而别，至今不知所终。师说法，贵直指心要，不立文字，其留传后世之著述，除早期所著《解脱歌》外，只此告别诗一首。
+         （注：“○”读音同“圆”）
+  </view>
+</view>
