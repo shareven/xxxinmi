@@ -6,37 +6,83 @@ Page({
    */
   data: {
     bookName:'新年呢',
-    currentMode:'day'
+    currentMode:'day',
+    fontSize: 30
   },
 
   /**
    * 减小字体
    */
   reduceA: function (d) {
-    
+    var fontSize = Math.max(this.data.fontSize - 3 ,24) ;console.log(fontSize);
+    this.setData({
+      fontSize:fontSize
+    })
   },
 
   /**
    * 增大字体
    */
   addA: function (d) {
-    
+    var fontSize = Math.min(this.data.fontSize + 3, 51); console.log(fontSize);
+    this.setData({
+      fontSize: fontSize
+    })
   },
 
   /**
    * 切换夜间模式与白天模式
    */
   switchMode: function (d) {
+    var mode = d.currentTarget.dataset.mode
+   
+    mode=='night' && (wx.setNavigationBarColor({
+      backgroundColor:'#444444',
+      frontColor:'#ffffff'
+    }) ,1)
+    || wx.setNavigationBarColor({
+      backgroundColor: '#fffffff',
+      frontColor: '#000000'
+    });
     this.setData({
-      currentMode: d.currentTarget.dataset.mode
-    })
+      currentMode: mode
+    });
   },
 
+  /**
+   * 目录页
+   */
+  goContents: function () {
+    wx.navigateTo({
+      url: '../bookcontents/bookcontents',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
+  /**
+   * 下一章
+   */
+  nextChapter: function (options) {
+    
+  },
+  /**
+   * 下一章
+   */
+  nextChapter: function (options) {
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // wx.setBackgroundColor({
+    //   // backgroundColor:'#333',
+    //   backgroundColorTop:'#333'
+    // });
+    wx.setNavigationBarTitle({
+      title: this.data.bookName
+    })
   },
 
   /**

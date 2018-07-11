@@ -1,7 +1,11 @@
 /* pages/book/bookreading/bookreading.wxss */
+page{
+   height: 100%;
+}
 .container{
+  display: block;
   padding: 20rpx;
-  /* min-height: 100%; */
+    min-height: 100%;  
 }
 .top{
   display: flex;
@@ -61,4 +65,7 @@
   color: #333;
   font-size: 30rpx
 }
+/* page{
+  background: #333;
+} */
 
