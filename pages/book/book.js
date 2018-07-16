@@ -12,8 +12,7 @@ Page({
       key: '书库',
       param: [{
         orderCol: '全部'
-      }]
-    }, {
+      }]}, {
       key: '心密文集',
       param: [{
         orderCol: '佛心经'
@@ -35,26 +34,25 @@ Page({
       }]
     }],
     subCategorys: [],
-    bookList:[
-      {
-        id:122,
-        cover:'../../images/img/book1.png',
-        name:'窗前收到地方'
+    bookList: [{
+        id: 122,
+        cover: '../../images/img/book1.png',
+        name: '窗前收到地方'
       },
       {
-        id:12222,
-        cover:'../../images/img/book2.png',
-        name:'但是地方'
+        id: 12222,
+        cover: '../../images/img/book2.png',
+        name: '但是地方'
       },
       {
-        id:1242,
-        cover:'../../images/img/book3.png',
-        name:'还好到地方'
+        id: 1242,
+        cover: '../../images/img/book3.png',
+        name: '还好到地方'
       },
       {
-        id:12245,
-        cover:'../../images/img/book4.png',
-        name:'豆腐坊地方'
+        id: 12245,
+        cover: '../../images/img/book4.png',
+        name: '豆腐坊地方'
       },
     ]
   },
@@ -68,7 +66,7 @@ Page({
       success: (d) => {
 
         this.setData({
-          categorys:d.data.list,
+          categorys: d.data.list,
           subCategorys: d.data.list[0].param
         })
       }
@@ -88,7 +86,7 @@ Page({
   /**
    * 获取书籍列表
    */
-  getBookList:function (e)  {
+  getBookList: function(e) {
     this.setData({
       currentSubTab: e.target.dataset.currentSub
     });

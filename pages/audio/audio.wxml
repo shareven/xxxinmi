@@ -1,2 +1,36 @@
 <!--pages/audio/audio.wxml-->
-<text>pages/audio/audio.wxml</text>
+<view>
+  <view class='loading' wx:if="{{showloading}}"></view>
+  <view class='top-group'>
+    <search m-placeholder="搜索音频名称"></search>
+
+  </view>
+  <view class='navbar'>
+    <text class='tab-item {{currentTab==index?"active":""}}' data-current='{{index}}' wx:for="{{categorys}}" wx:key="{{item.id}}" bindtap='switchTabs'>{{item.name}} </text>
+  </view>
+  <view class='list clearfix'>
+    <view class='list-item {{currentAudioIndex==index?"active":""}}' wx:for='{{audioList}}' wx:key='{{item.id}}'>
+      <view class='ellip name'>{{index+1}}.{{item.title}}</view>
+      <icon type='warn' wx:if="{{currentAudioIndex == index}}" data-index='{{index}}' bindtap='audioPause'></icon>
+      <icon type='info' data-index='{{index}}' wx:else bindtap='audioPlay'></icon>
+      <icon type='download'></icon>
+    </view>
+  </view>
+
+  <!-- 播放条 -->
+  <view class='playerbar' >
+  <!-- <view class='playerbar' wx:if="{{currentAudio!=null}}"> -->
+    <!-- <audio   src="{{currentAudio.src}}" id="myAudio" controls loop></audio> -->
+    <view class="lds-css ng-scope">
+      <view  class="lds-facebook">
+        <view></view>
+        <view></view>
+        <view></view>
+      </view>
+      </view>
+      <text>{{}}</text>
+      <icon type="info" bindtap="audioPlay">播放</icon>
+      <icon type="warn" bindtap="audioPause">暂停</icon>
+      <icon type="cancel" bindtap="collecte">喜欢</icon>
+  </view>
+</view>

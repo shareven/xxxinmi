@@ -1,2 +1,6 @@
 <!--pages/book/bookcontents/bookcontents.wxml-->
-<text>pages/book/bookcontents/bookcontents.wxml</text>
+<view class='contents'>
+  <view wx:for='{{sectionList}}' class='item {{curentSectionNo==item.sectionNo?"active":""}}'>
+    <navigator url='../bookreading/bookreading' hover-class='none'>{{item.sectionName}}</navigator>
+  </view>
+</view>

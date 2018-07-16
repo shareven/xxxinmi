@@ -14,13 +14,22 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
+    inputValue:''
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-
+    bindInput: function (e) {
+      this.setData({
+        inputValue: e.detail.value
+      })
+    },
+    clear: function (e) {
+      this.setData({
+        inputValue: ''
+      });
+    },
   }
 })

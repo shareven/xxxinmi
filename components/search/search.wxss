@@ -13,11 +13,18 @@
   border: 1px solid #eee;
   border-radius: 28rpx;
   font-size: 30rpx;
+  z-index: 1;
 }
-.wrapper icon{
+.wrapper .search{
   position: absolute;
   top: 12rpx;
   left: 12rpx;
+}
+.wrapper .clear{
+  position: absolute;
+  top: 12rpx;
+  right: 12rpx;
+  z-index: 2;
 }
 .input-placeholder{
 

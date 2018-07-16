@@ -1,1 +1,13 @@
 /* pages/book/bookcontents/bookcontents.wxss */
+.contents{
+  /* padding: 50rpx 0rpx; */
+}
+.item{
+  padding: 20rpx ;
+  font-size: 30rpx;
+  color: #333;
+}
+.item.active{
+  background: skyblue;
+  color: #fff;
+}

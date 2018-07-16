@@ -38,6 +38,10 @@ page{
 .night .sub-title{
   color: #aaa;
 }
+.night .control-book button{
+  background: #888;
+  color: #fff;
+}
 .control{
   display: flex;
   flex: 1;
@@ -68,4 +72,16 @@ page{
 /* page{
   background: #333;
 } */
+.control-book{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 100rpx 10rpx;
+  padding-bottom: 100rpx;
+  margin: 100rpx 10rpx;
+}
+.control-book button{
+  margin: 20rpx ;
+  width: 280rpx;
+}
 
