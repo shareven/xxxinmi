@@ -7,6 +7,7 @@ Page({
   data: {
     currentTab: 0,
     currentAudioIndex: null,
+    isPlaying:false,
     currentAudio: null,
     categorys: [{
       name: '佛教常识',
@@ -24,7 +25,7 @@ Page({
         downloadUrl: 'dsfds/sdgsf',
         poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
         author: '许巍',
-        src: 'https://www.xinmizj.com/res/audio/src/yylhbyyjt.mp3',
+        src: 'https://www.xinmizj.com/res/audio/src/Y6dY0xI5zH1vX7rH0r71.mp3',
       },
       {
         id: 213,
@@ -32,7 +33,7 @@ Page({
         downloadUrl: 'dsfds/sdgsf',
         poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
         author: '许巍',
-        src: 'https://www.xinmizj.com/res/audio/src/yylhbyyjt.mp3',
+        src: 'https://www.xinmizj.com/res/audio/src/V9iG7aN4bE6wI5oC2e21.mp3',
       },
       {
         id: 214,
@@ -65,44 +66,49 @@ Page({
     })
   },
   audioPlay: function(e) {
-    this.play();
     var i = e.target.dataset.index;
+    if(i == this.data.currentAudioIndex ){
+      this.setData({
+        isPlaying: !0
+      });
+      return this.audioManager.play();
+    }
+    this.audioManager.stop();
     this.setData({
+      isPlaying:!0,
       currentAudioIndex: i,
       currentAudio: this.data.audioList[i]
     });
+    this.audioManager.src = this.data.currentAudio.src;
+    this.audioManager.title = this.data.currentAudio.title;
   },
   audioPause: function(e) {
-    this.createAudio().pause();
+    wx.pauseBackgroundAudio();
     this.setData({
-      currentAudioIndex: null
+      isPlaying: !1
     });
   },
-  createAudio: function() {
-    const innerAudioContext = wx.createInnerAudioContext()
-    innerAudioContext.autoplay = !1
-    innerAudioContext.src = this.data.audioList[0].src
-    innerAudioContext.onPlay(() => {
-      console.log('开始播放')
-    })
-    innerAudioContext.onError((res) => {
-      console.log(res.errMsg)
-      console.log(res.errCode)
-    })
-    return innerAudioContext
+  audioPlayOld: function() {
+    this.setData({
+      isPlaying: !0
+    });
+    return this.audioManager.play();
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.createAudio();
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    this.audioCtx = wx.createAudioContext('myAudio');
+    this.audioManager = wx.getBackgroundAudioManager();
+    this.audioManager.onWaiting = function(){
+      this.audioManager.title="正在缓冲..." 
+    };
   },
 
   /**

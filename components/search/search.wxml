@@ -1,6 +1,6 @@
 <view class="wrapper">
-  <icon type='search' size='18' class='search'></icon>
+  <icon type='search' size='16' class='search'></icon>
   <input bindinput="bindInput" placeholder="{{mPlaceholder}}" value="{{inputValue}}" confirm-type="search"></input>
-  <icon type='clear' size='18' class='clear' bindtap='clear'></icon>
+  <icon type='clear' size='14' class='clear' bindtap='clear'></icon>
   <slot></slot>
 </view>
