@@ -11,9 +11,9 @@
   <view class='list clearfix'>
     <view class='list-item {{currentAudioIndex==index?"active":""}}' wx:for='{{audioList}}' wx:key='{{item.id}}'>
       <view class='ellip name'>{{index+1}}.{{item.title}}</view>
-      <icon type='warn' wx:if="{{isPlaying&&currentAudioIndex==index}}" data-index='{{index}}' bindtap='audioPause'></icon>
-      <icon type='info' data-index='{{index}}' wx:else bindtap='audioPlay'></icon>
-      <icon type='download'></icon>
+      <i class='iconfont icon-zanting' wx:if="{{isPlaying&&currentAudioIndex==index}}" data-index='{{index}}' bindtap='audioPause'></i>
+      <i class='iconfont icon-bofang1' data-index='{{index}}' wx:else bindtap='audioPlay'></i>
+      <i class='iconfont icon-xiazai' ></i>
     </view>
   </view>
 
@@ -21,7 +21,7 @@
   <view class='playerbar' hidden='{{currentAudioIndex==null}}'>
     <!-- <view class='playerbar' wx:if="{{currentAudio!=null}}"> -->
     <!-- <audio   src="{{currentAudio.src}}" id="myAudio" controls loop></audio>  -->
-    <view class="lds-css">
+    <view class="lds-css" bindtap='godetail'>
       <view class="lds-music {{isPlaying?'':'stop'}}">
         <view></view>
         <view></view>
@@ -30,9 +30,9 @@
     </view>
     <text class='ellip'>{{currentAudio.title}}</text>
     <view class='btn'>
-      <icon type="warn" wx:if='{{isPlaying}}' bindtap="audioPause">暂停</icon>
-      <icon type="info" wx:else bindtap="audioPlayOld">播放</icon>
-      <icon type="cancel" bindtap="collecte">喜欢</icon>
+      <i class='iconfont icon-zanting1'  wx:if='{{isPlaying}}' bindtap="audioPause"></i>
+      <i class='iconfont icon-bofang'  wx:else bindtap="audioPlayOld"></i>
+      <i class='iconfont icon-shoucang red'  bindtap="collecte"></i>
     </view>
   </view>
 </view>

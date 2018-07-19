@@ -94,6 +94,11 @@ Page({
     });
     return this.audioManager.play();
   },
+  godetail: function() {
+   wx.navigateTo({
+     url: './audiodetail/audiodetail',
+   })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
