@@ -1,2 +1,35 @@
 <!--pages/audio/audiodetail/audiodetail.wxml-->
-<text>pages/audio/audiodetail/audiodetail.wxml</text>
+<view class='container'>
+  <view class='switch-wrap'>
+    <!-- 作者信息 -->
+    <view class='info' wx:if="{{isShowInfo}}" bindtap='switchInfo'>
+      <view class='title'>心性也是一种波相吗的?</view>
+      <view class='author'>齐老师 | 2018-07-17</view>
+      <scroll-view scroll-y='true' class='introduce'>介绍：齐老师开示</scroll-view>
+    </view>
+
+    <view class='img-wrap' wx:else>
+      <image src='../../../images/img/audio_detail.jpg' bindtap='switchInfo' mode="widthFix"></image>
+    </view>
+  </view>
+  <view class='bottom-wrap'>
+    <view class='propress-wrap'>
+      <view class='time'>{{currentTime}}</view>
+      <view class='progress'>
+        <slider bindchange="sliderchange" value="{{offset}}" min="0" max="{{max}}" bindchange='seekAudio' activeColor="#4E7319" block-size="12" backgroundColor="#ddd"/>
+        <!-- <progress percent="{{audioPercent}}"  bindtap='seekAudio' active-mode="backwards" activeColor="#4E7319" stroke-width="2" backgroundColor="#ddd"></progress> -->
+      </view>
+      <view class='time'>{{duration}}</view>
+    </view>
+
+    <view class='control'>
+      <i class='collect iconfont icon-shoucang2' wx:if="{{isCollected}}" bindtap='collect'></i>
+      <i class='color9 iconfont icon-shoucang3' wx:else bindtap='collect'></i>
+      <i class='m-color iconfont icon-shangyishoushangyige' bindtap='playLast'></i>
+      <i class='m m-color iconfont icon-zanting'  wx:if='{{isPlaying}}' bindtap='audioPause'></i>
+      <i class='m m-color iconfont icon-bofang1'  wx:else bindtap="audioPlayOld"></i>
+      <i class='m-color iconfont icon-xiayigexiayishou' bindtap='playNext'></i>
+      <i class='iconfont icon-xiazai' bindtap='dowload'></i>
+    </view>
+  </view>
+</view>

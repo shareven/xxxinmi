@@ -16,11 +16,11 @@
   flex: 1;
   text-align: center;
   font-size: 30rpx;
-  color: #888;
+  color: #999;
 }
 
 .navbar .tab-item.active {
-  color: #222;
+  color: #4E7319;
 }
 
 .list .list-item{
@@ -70,8 +70,10 @@
 }
 .playerbar .btn i{
   margin: 0 15rpx;
-  font-size: 50rpx;
-  color: #888;
+  font-size: 60rpx;
+}
+.collect{
+  color: #FF0064;
 }
 
 @keyframes lds-music_1 {

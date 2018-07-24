@@ -28,11 +28,12 @@
         <view></view>
       </view>
     </view>
-    <text class='ellip'>{{currentAudio.title}}</text>
+    <text class='ellip' bindtap='godetail'>{{currentAudio.title}}</text>
     <view class='btn'>
-      <i class='iconfont icon-zanting1'  wx:if='{{isPlaying}}' bindtap="audioPause"></i>
-      <i class='iconfont icon-bofang'  wx:else bindtap="audioPlayOld"></i>
-      <i class='iconfont icon-shoucang red'  bindtap="collecte"></i>
+      <i class='m-color iconfont icon-zanting1'  wx:if='{{isPlaying}}' bindtap="audioPause"></i>
+      <i class='m-color iconfont icon-bofang'  wx:else bindtap="audioPlayOld"></i>
+      <i class='collect iconfont icon-shoucang2' wx:if="{{isCollected}}" bindtap='collect'></i>
+      <i class='color9 iconfont icon-shoucang3' wx:else bindtap='collect'></i>
     </view>
   </view>
 </view>

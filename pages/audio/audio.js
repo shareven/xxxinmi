@@ -7,7 +7,7 @@ Page({
   data: {
     currentTab: 0,
     currentAudioIndex: null,
-    isPlaying:false,
+    isPlaying: false,
     currentAudio: null,
     categorys: [{
       name: '佛教常识',
@@ -67,7 +67,7 @@ Page({
   },
   audioPlay: function(e) {
     var i = e.target.dataset.index;
-    if(i == this.data.currentAudioIndex ){
+    if (i == this.data.currentAudioIndex) {
       this.setData({
         isPlaying: !0
       });
@@ -75,7 +75,7 @@ Page({
     }
     this.audioManager.stop();
     this.setData({
-      isPlaying:!0,
+      isPlaying: !0,
       currentAudioIndex: i,
       currentAudio: this.data.audioList[i]
     });
@@ -95,9 +95,17 @@ Page({
     return this.audioManager.play();
   },
   godetail: function() {
-   wx.navigateTo({
-     url: './audiodetail/audiodetail',
-   })
+    wx.navigateTo({
+      url: './audiodetail/audiodetail',
+    })
+  },
+  /**
+   * 收藏
+   */
+  collecte: function() {
+    this.setData({
+      isCollected: !this.data.isCollected
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -111,8 +119,8 @@ Page({
    */
   onReady: function() {
     this.audioManager = wx.getBackgroundAudioManager();
-    this.audioManager.onWaiting = function(){
-      this.audioManager.title="正在缓冲..." 
+    this.audioManager.onWaiting = function() {
+      this.audioManager.title = "正在缓冲..."
     };
   },
 
@@ -120,7 +128,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    this.audioManager && this.setData({
+      isPlaying: !this.audioManager.paused
+    })
   },
 
   /**
