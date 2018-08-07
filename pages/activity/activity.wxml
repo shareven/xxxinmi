@@ -1,2 +1,33 @@
 <!--pages/activity/activity.wxml-->
-<text>pages/activity/activity.wxml</text>
+<view>
+  <view class='loading' wx:if="{{showloading}}"></view>
+  <view class='top-group'>
+    <search m-placeholder="搜索活动"></search>
+  </view>
+  <view class='tabs'>
+    <view class='navbar'>
+      <text class='tab-item {{currentTab==index?"active":""}}' data-current='{{index}}' wx:for="{{categorys}}" wx:key="{{item.id}}" bindtap='switchTabs'>{{item.name}} </text>
+    </view>
+    <view class='activity-content '>
+
+      <view class='activity-list'>
+        <view class='wrap' wx:for="{{activityList}}" wx:key="{{item.id}}">
+          <view class='header'>
+            <view class='avatar'>
+              <image src="{{item.avatar}}" mode="widthFix"></image>
+            </view>
+            <view class='other'>
+              <view class='title'>{{item.title}}</view>
+              <view class='author'>{{item.nickname}}</view>
+              <button class='m-btn' size='mini' bindtap='goDetail'>查看详情</button>
+            </view>
+          </view>
+          <text class='info'>{{item.content}}</text>
+          <navigator url='./activitydetail/activitydetail' class='activity' hover-class="none">
+            <image class='cover' src="{{item.cover}}" mode="widthFix"></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

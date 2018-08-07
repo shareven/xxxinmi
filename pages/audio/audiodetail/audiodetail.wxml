@@ -29,7 +29,7 @@
       <i class='m m-color iconfont icon-zanting'  wx:if='{{isPlaying}}' bindtap='audioPause'></i>
       <i class='m m-color iconfont icon-bofang1'  wx:else bindtap="audioPlayOld"></i>
       <i class='m-color iconfont icon-xiayigexiayishou' bindtap='playNext'></i>
-      <i class='iconfont icon-xiazai' bindtap='dowload'></i>
+      <i class='iconfont icon-xiazai' bindtap='dowload'  bindtap='download'></i>
     </view>
   </view>
 </view>

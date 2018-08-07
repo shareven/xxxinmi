@@ -1,2 +1,8 @@
 <!--pages/video/videodetail/videodetail.wxml-->
-<text>pages/video/videodetail/videodetail.wxml</text>
+<view class='container'>
+  <!-- <view class='video-wrap'> -->
+    <!-- <video src='{{newSrc}}'  ></video> -->
+    <tx-video vid="{{vid}}"></tx-video>
+    <!-- <video id="myVideo" src='https://imgcache.qq.com/tencentvideo_v1/player/TPout.swf?max_age=86400&v=20140714' autoplay="true"></video> -->
+  <!-- </view> -->
+</view>

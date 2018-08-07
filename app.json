@@ -1,18 +1,19 @@
 {
   "pages": [
+    "pages/activity/activitydetail/activitydetail",
+    "pages/activity/activity",
+    "pages/video/video",
+    "pages/video/videodetail/videodetail",
+    "pages/index/index",
     "pages/audio/audio",
     "pages/audio/audiodetail/audiodetail",
+    "pages/book/book",
     "pages/book/bookcontents/bookcontents",
     "pages/book/bookdetail/bookdetail",
     "pages/book/bookreading/bookreading",
-    "pages/index/index",
-    "pages/book/book",
     "pages/book/bookshelf/bookshelf",
-    "pages/video/video",
-    "pages/video/videodetail/videodetail",
     "pages/tribune/tribune",
     "pages/mall/mall",
-    "pages/activity/activity",
     "pages/mine/mine",
     "pages/more/more"
   ],
@@ -47,4 +48,5 @@
       }
     ]
   }
+ 
 }

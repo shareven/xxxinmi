@@ -41,6 +41,43 @@ Page({
     });
     return this.audioManager.play();
   },
+  /**
+   * 下载
+   */
+  download: function (e) {
+    wx.downloadFile({
+      url: this.audioManager.src,
+      header: {},
+      success: function (res) {
+        wx.saveFile({
+          tempFilePath: res.tempFilePath,
+          success: function (res) {
+            wx.showToast({
+              title: '下载成功',
+              icon: 'success',
+              duration: 2000
+            })
+          },
+          fail: function (res) {
+            wx.showToast({
+              title: '保存失败',
+              icon: 'none',
+              duration: 2000
+            })
+          },
+          complete: function (res) { },
+        })
+      },
+      fail: function (res) {
+        wx.showToast({
+          title: '下载失败',
+          icon: 'none',
+          duration: 2000
+        })
+      },
+      complete: function (res) { },
+    })
+  },
   timeUpdate: function() {
     let that = this;
     this.audioManager.onTimeUpdate(function() {

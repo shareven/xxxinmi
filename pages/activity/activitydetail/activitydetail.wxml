@@ -1,0 +1,31 @@
+<!--pages/activity/activitydetail/activitydetail.wxml-->
+<view class='container'>
+  <view class='title'>{{activity.title}}</view>
+  <view class='sub-item'>
+    <image class='avatar' src='{{activity.avatar}}'></image>
+    <text class='author'>{{activity.nickname}}</text>
+    <text class='time'>{{activity.createTime}}</text>
+  <button class='m-btn' size='mini'>报名</button>
+  </view>
+  <image class='cover-img' src='{{activity.cover}}' mode='widthFix'></image>
+  <view class='content'>{{activity.content}}</view>
+  <view class='comments-title'>全部评论：</view>
+  <view class='comments' wx:for="{{commentList}}">
+    <image class='avatar' src='{{item.avatar}}'></image>
+    <text class='author'>{{item.nickname}}</text>
+    <text class='info'>{{item.content}}</text>
+  </view>
+  <view class='footer'>
+    <input placeholder='写评论...'></input>
+    <view class='iconList'>
+      <i class='iconfont icon-dianzan1' wx:if="{{isLike}}" bindtap='like'></i>
+      <i class='iconfont icon-dianzan' wx:else bindtap='unlike'></i>
+
+      <i class='iconfont icon-shoucang1' wx:if="{{isCollected}}" bindtap='collect'></i>
+      <i class='iconfont icon-shoucang' wx:else bindtap='uncollect'></i>
+
+      <i class='iconfont icon-fenxiang1' data-index='{{index}}' bindtap='share'></i>
+    </view>
+  </view>
+
+</view>

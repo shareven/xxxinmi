@@ -1,2 +1,29 @@
 <!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
+<view class='container'>
+  <view class='video-type'>
+    <text wx:for="{{category}}" wx:key="{{item.id}}" class='tab-item {{currentTab==index?"active":""}}' data-current='{{index}}' bindtap='switchTabs'>{{item.name}}</text>
+  </view>
+  <view class='top-group'>
+    <search m-placeholder="搜索音频名称"></search>
+  </view>
+  <swiper indicator-dots="true" indicator-color="#ddd" indicator-active-color="#4E7319" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{recommes}}" wx:key="{{item.id}}">
+      <swiper-item class="clearfix">
+        <image src="{{item.cover}}" class="slide-image" mode='widthFix' />
+        <view class='title'>
+          <text>{{item.title}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='video-list'>
+    <view class='list-item' wx:for="{{videoList}}" wx:key="{{item.id}}">
+      <navigator url='./videodetail/videodetail'>
+        <image src="{{item.cover}}" class="slide-image" mode='widthFix' />
+        <view class='title ellip'>{{item.title}}</view>
+        <view class='info ellip'>{{item.info}}</view>
+      </navigator>
+    </view>
+  </view>
+</view>

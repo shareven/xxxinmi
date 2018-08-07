@@ -1,0 +1,61 @@
+/* pages/activity/activitydetail/activitydetail.wxss */
+.container{
+  width: 100%;
+  padding: 10rpx;
+}
+.title{
+  font-size: 46rpx;
+}
+.sub-item{
+   display: flex;
+   margin: 10rpx ;
+   justify-content: center;
+   align-items: center;
+  font-size: 26rpx;
+}
+.avatar{
+   margin-left: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+ .author{
+   margin: 20rpx;
+}
+.sub-item .time{
+  margin: 20rpx;
+}
+.cover-img{
+  margin: 10rpx auto;
+  width: 730rpx;
+}
+.comments-title{
+ margin-top: 30rpx ;
+ width: 100%;
+ font-size: 26rpx;
+ text-align: left;
+}
+.comments{
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.footer{
+  margin: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.footer input{
+  padding: 20rpx;
+  width: 400rpx;
+}
+.footer .iconList{
+  width: 300rpx;
+}
+.footer .iconList i{
+  margin: 0 20rpx;
+}

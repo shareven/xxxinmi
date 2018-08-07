@@ -1,1 +1,64 @@
 /* pages/activity/activity.wxss */
+
+.top-group {
+  height: 60rpx;
+}
+
+.tabs {
+  margin: 20rpx 0;
+}
+
+.navbar {
+  display: flex;
+  padding: 30rpx 0;
+  margin: 50rpx 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar .tab-item {
+  flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  color: #888;
+}
+
+.navbar .tab-item.active {
+  color: #222;
+}
+.wrap{
+  margin: 20rpx ;
+}
+.header{
+  display: flex;
+  margin: 30rpx 0;
+  width: 710rpx;
+}
+.header .avatar{
+  flex: 1;
+}
+.header .avatar image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.header .other{
+  position: relative;
+  flex: 7;
+}
+.header .other .author{
+  font-size: 28rpx;
+  color: #999;
+}
+.header .other button{
+  position: absolute;
+  top: 50rpx;
+  right: 20rpx;
+}
+.info{
+  font-size: 30rpx;
+  color: #333;
+}
+.cover{
+  width: 710rpx;
+}

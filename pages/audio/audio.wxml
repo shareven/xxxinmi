@@ -13,7 +13,7 @@
       <view class='ellip name'>{{index+1}}.{{item.title}}</view>
       <i class='iconfont icon-zanting' wx:if="{{isPlaying&&currentAudioIndex==index}}" data-index='{{index}}' bindtap='audioPause'></i>
       <i class='iconfont icon-bofang1' data-index='{{index}}' wx:else bindtap='audioPlay'></i>
-      <i class='iconfont icon-xiazai' ></i>
+      <i class='iconfont icon-xiazai' data-index='{{index}}' bindtap='download'></i>
     </view>
   </view>
 

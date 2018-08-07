@@ -94,9 +94,50 @@ Page({
     });
     return this.audioManager.play();
   },
+  /**
+   * 进入播放页
+   */
   godetail: function() {
     wx.navigateTo({
       url: './audiodetail/audiodetail',
+    })
+  },
+  /**
+   * 下载
+   */
+  download: function(e) {
+    var i = e.target.dataset.index;
+    wx.downloadFile({
+      url: this.data.audioList[i].src,
+      header: {},
+      success: function(res) {
+        wx.saveFile({
+          tempFilePath: res.tempFilePath,
+          success: function(res) {
+            wx.showToast({
+              title: '下载成功',
+              icon: 'success',
+              duration: 2000
+            })
+          },
+          fail: function(res) {
+            wx.showToast({
+              title: '保存失败',
+              icon: 'none',
+              duration: 2000
+            })
+          },
+          complete: function(res) {},
+        })
+      },
+      fail: function(res) {
+        wx.showToast({
+          title: '下载失败',
+          icon: 'none',
+          duration: 2000
+        })
+      },
+      complete: function(res) {},
     })
   },
   /**

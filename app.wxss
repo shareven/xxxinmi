@@ -19,6 +19,11 @@
   color: #fff;
   background: #4E7319;
 }
+.m-btn{
+  color: #4E7319;
+  background: #fff;
+  border: 1rpx solid #4E7319;
+}
 .color9{
   color: #999;
 }
@@ -103,12 +108,13 @@
 /* 字体图标 */
 @font-face {
   font-family: 'iconfont';  /* project id 742060 */
-  src: url('//at.alicdn.com/t/font_742060_4qjsikcai4a.eot');
-  src: url('//at.alicdn.com/t/font_742060_4qjsikcai4a.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_742060_4qjsikcai4a.woff') format('woff'),
-  url('//at.alicdn.com/t/font_742060_4qjsikcai4a.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_742060_4qjsikcai4a.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_742060_erb5e84wmhg.eot');
+  src: url('//at.alicdn.com/t/font_742060_erb5e84wmhg.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_742060_erb5e84wmhg.woff') format('woff'),
+  url('//at.alicdn.com/t/font_742060_erb5e84wmhg.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_742060_erb5e84wmhg.svg#iconfont') format('svg');
 }
+
 .iconfont {
   font-family:"iconfont" !important;
   font-size:16px;
@@ -141,7 +147,13 @@
 
 .icon-zanting1:before { content: "\e60a"; }
 
+.icon-dianzan:before { content: "\e61a"; }
+
 .icon-xiazai:before { content: "\e7bb"; }
+
+.icon-setup_icon:before { content: "\e662"; }
+
+.icon-dianzan1:before { content: "\e668"; }
 
 .icon-icon--:before { content: "\e79d"; }
 

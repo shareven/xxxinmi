@@ -1,1 +1,60 @@
 /* pages/video/video.wxss */
+page{
+  background: #eee;
+}
+.video-type{
+  text-align: left;
+}
+.video-type text{
+  margin-right: 100rpx;
+  color: #999;
+}
+.video-type text.active{
+  color: #4E7319;
+}
+.top-group{
+  width: 700rpx;
+}
+swiper{
+  width: 700rpx;
+  height: 340rpx
+}
+swiper-item{
+  position: relative;
+}
+swiper-item image{
+  width: 100%;
+}
+swiper-item .title{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 30rpx;
+  text-indent: 10rpx;
+  background: rgba(0, 0, 0, .5);
+}
+.video-list{
+  margin: 20rpx 14rpx;
+}
+.video-list .list-item{
+  float: left;
+  margin:  11rpx;
+  padding: 0;
+  width: 340rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.video-list .list-item image{
+  width: 340rpx;
+}
+.video-list .list-item .title{
+  padding: 0 8rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.video-list .list-item .info{
+  padding: 0 8rpx 8rpx 8rpx;
+  font-size: 24rpx;
+  color: #888;
+}
